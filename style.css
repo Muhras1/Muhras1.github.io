@@ -1,0 +1,55 @@
+header{
+
+background-color: rgb(255, 128, 0);
+height: 50px;
+width: 100%;
+border-radius: 25px;
+margin-bottom: 20px;
+font-family: 'Playfair Display', serif;
+}
+
+nav{
+
+
+    background-color: rgb(255, 98, 0);
+    height: 50px;
+    width: 100%;
+    
+
+
+}
+
+#container{
+
+    display:flex;
+}
+
+
+aside{
+
+
+    background-color: rgb(203, 86, 51);
+    height: 400px;
+    width: 20%;
+    
+
+
+}
+main{
+
+    background-color: rgb(226, 34, 13);
+    height: 400px;
+    width: 80%;
+    
+
+
+}
+footer{
+
+
+    background-color: rgb(138, 2, 0);
+    height: 50px;
+    width: 100%;
+
+
+}
