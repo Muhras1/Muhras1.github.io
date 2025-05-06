@@ -1,33 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="CSS/style.css">
-    <style>
-        .responsive {
-            width: 100%;
-            height: auto;
-            max-width: 100%;
-            max-height: 100%;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lullaby Scene</title>
+  <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
-    <div id="Wrapper">
-        <header>
-            <p style="font-family:cursive">Surströmming</p>
-        </header>
-        <main>
-            <img src="CSS/Regular-fishpng.png" height="200" width="200">
-            <img src="CSS/Strawberry-fish.png" height="200" width="200">
-            <img src="CSS/Banana-fish.png" height="200" width="200">
-            <a href="https://ilyyou1.github.io/">Info page</a>
-        </main>
-        <footer></footer>
-    </div>
+  <div class="scene">
+    <img class="sky day" src="images/day-sky.jpg" alt="day sky">
+    <img class="sky night" src="images/night-sky.jpg" alt="night sky">
+    <img class="hill" src="images/hill.png" alt="hill">
+    <img class="house" src="images/House.png" alt="house">
+
+    <!-- Bed button -->
+    <button class="bed-button">
+      <img src="images/bed.png" alt="bed">
+    </button>
+
+    <!-- Radio button -->
+    <button class="radio-button">
+      <img src="images/Radio.png" alt="radio">
+    </button>
+  </div>
+
+  <!-- Lullaby Audio -->
+  <audio id="radio-audio" src="audio/Lullabye.mp3" loop></audio>
+
+  <!-- JavaScript -->
+  <script>
+    // Background toggle with bed button
+    const bedButton = document.querySelector('.bed-button');
+    bedButton.addEventListener('click', () => {
+      document.body.classList.toggle('night-mode');
+    });
+
+    // Audio toggle with radio button
+    const radioButton = document.querySelector('.radio-button');
+    const audio = document.getElementById('radio-audio');
+    let isPlaying = false;
+
+    radioButton.addEventListener('click', () => {
+      if (isPlaying) {
+        audio.pause();
+      } else {
+        audio.play();
+      }
+      isPlaying = !isPlaying;
+    });
+  </script>
 </body>
 </html>
