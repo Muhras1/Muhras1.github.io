@@ -110,6 +110,21 @@ body.night-mode .sky.night {
     transform: scale(0.95);
 }
 
+/* Optional CSS for styling landscape message */
+.landscape-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    z-index: 9999; /* Make sure it appears on top of everything */
+    display: none; /* Hidden initially */
+}
+
+
 img {
     max-width: 100%;
     height: auto;
