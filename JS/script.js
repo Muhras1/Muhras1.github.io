@@ -18,7 +18,7 @@ radioButton.addEventListener('click', () => {
   isPlaying = !isPlaying;
 });
 
-// Detect orientation and display message if in portrait mode
+// Create the landscape message
 const landscapeMessage = document.createElement('div');
 landscapeMessage.style.position = 'fixed';
 landscapeMessage.style.top = '0';
@@ -29,9 +29,11 @@ landscapeMessage.style.color = 'white';
 landscapeMessage.style.textAlign = 'center';
 landscapeMessage.style.padding = '20px';
 landscapeMessage.innerText = 'Please rotate your device to landscape mode for the best experience.';
-landscapeMessage.style.display = 'none';
+landscapeMessage.style.display = 'none'; 
+landscapeMessage.style.zIndex = '9999';  
 document.body.appendChild(landscapeMessage);
 
+// Function to check the device orientation
 function checkOrientation() {
   if (window.innerWidth < window.innerHeight) {
     landscapeMessage.style.display = 'block';
@@ -40,8 +42,9 @@ function checkOrientation() {
   }
 }
 
-
+// Run orientation check on resize
 window.addEventListener('resize', checkOrientation);
 
-
+// Run the initial check
 checkOrientation();
+
