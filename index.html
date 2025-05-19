@@ -7,35 +7,52 @@
   <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
-  <div class="scene">
-    <img class="sky day" src="images/day-sky.jpg" alt="day sky">
-    <img class="sky night" src="images/night-sky.jpg" alt="night sky">
-    <img class="hill" src="images/hill.png" alt="hill">
-    <img class="house" src="images/House.png" alt="house">
 
-    <!-- Bed button -->
-    <button class="bed-button">
-      <img src="images/bed.png" alt="bed">
+
+  <header>
+    <nav>
+  
+    </nav>
+  </header>
+
+
+  <main class="scene">
+ 
+    <img class="sky day" src="images/day-sky.jpg" alt="Day sky">
+    <img class="sky night" src="images/night-sky.jpg" alt="Night sky">
+
+
+    <img class="hill" src="images/hill.png" alt="Hill">
+
+
+    <img class="house" src="images/House.png" alt="House">
+
+
+    <button class="bed-button" aria-label="Toggle night mode">
+      <img src="images/bed.png" alt="Bed icon">
     </button>
 
-    <!-- Radio button -->
-    <button class="radio-button">
-      <img src="images/Radio.png" alt="radio">
+  
+    <button class="radio-button" aria-label="Toggle lullaby music">
+      <img src="images/Radio.png" alt="Radio icon">
     </button>
-  </div>
+  </main>
 
-  <!-- Lullaby Audio -->
+
   <audio id="radio-audio" src="audio/Lullabye.mp3" loop></audio>
 
-  <!-- JavaScript -->
+ 
+  <footer>
+
+  </footer>
+
+  
   <script>
-    // Background toggle with bed button
     const bedButton = document.querySelector('.bed-button');
     bedButton.addEventListener('click', () => {
       document.body.classList.toggle('night-mode');
     });
 
-    // Audio toggle with radio button
     const radioButton = document.querySelector('.radio-button');
     const audio = document.getElementById('radio-audio');
     let isPlaying = false;
