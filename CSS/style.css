@@ -120,8 +120,8 @@ body.night-mode .sky.night {
     color: white;
     text-align: center;
     padding: 20px;
-    z-index: 9999; /* Make sure it appears on top of everything */
-    display: none; /* Hidden initially */
+    z-index: 9999; 
+    display: none; 
 }
 
 
