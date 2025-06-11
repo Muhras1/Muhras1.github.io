@@ -58,14 +58,30 @@ body.night-mode .sky.night {
 
 .house {
     position: absolute;
-    bottom: 45vh;
+    bottom: 49vh;
     left: 50%;
     transform: translateX(-50%);
-    height: 25vh;
-    max-height: 300px;
+    height: 30vh;
+    max-height: 400px;
     width: auto;
     z-index: 3;
 }
+.house-text {
+    position: absolute;
+    bottom: 80vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+    font-family: 'Arial', sans-serif;
+}
+
+.night-mode .house-text {
+    color: #ffccff;
+}
+
 
 .bed-button,
 .radio-button {
@@ -79,13 +95,13 @@ body.night-mode .sky.night {
 }
 
 .bed-button {
-    bottom: 52vh;
+    bottom: 47vh;
     z-index: 4;
 }
 
 .bed-button img {
-    height: 8vh;
-    max-height: 100px;
+    height: 16vh;
+    max-height: 200px;
     width: auto;
     transition: transform 0.1s ease;
 }
@@ -95,13 +111,13 @@ body.night-mode .sky.night {
 }
 
 .radio-button {
-    bottom: 55vh;
+    bottom: 57vh;
     z-index: 6;
 }
 
 .radio-button img {
-    height: 5vh;
-    max-height: 50px;
+    height: 12vh;
+    max-height: 150px;
     width: auto;
     transition: transform 0.1s ease;
 }
